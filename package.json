@@ -24,6 +24,7 @@
     "@zeroqs/eslint": "^1.0.1",
     "@zeroqs/prettier": "^1.0.1",
     "husky": "^8.0.0",
+    "mock-config-server": "^3.6.1",
     "typescript": "^5.2.2",
     "vite": "^5.0.0"
   }
