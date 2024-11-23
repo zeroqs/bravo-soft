@@ -104,10 +104,10 @@ const mockServerConfig: MockServerConfig = {
             data: { message: 'success' },
             interceptors: {
               response: (data, { request, setStatusCode }) => {
-                const { userId, name } = request.body;
+                const { userId, documentName } = request.body;
 
                 const apllication = applications.find(
-                  (app) => app.documentName === name
+                  (app) => app.documentName === documentName
                 );
                 const existingApplication = apllication && apllication.userIds.includes(userId);
 
@@ -119,7 +119,7 @@ const mockServerConfig: MockServerConfig = {
                 if (!apllication) {
                   applications.push({
                     id: applications.length + 1,
-                    documentName: name,
+                    documentName,
                     userIds: [userId]
                   });
                 } else {

@@ -24,7 +24,7 @@ export const Table = ({ data }: Props) => {
     <>
       <Title size='h3' pb={20} pl={10}>Ваши заявки</Title>
 
-      <ScrollArea h={300} onScrollPositionChange={({ y }) => setScrolled(y !== 0)}>
+      <ScrollArea h='100%' onScrollPositionChange={({ y }) => setScrolled(y !== 0)}>
         <MantineTable miw={700}>
           <MantineTable.Thead className={cx(classes.header, { [classes.scrolled]: scrolled })}>
             <MantineTable.Tr>

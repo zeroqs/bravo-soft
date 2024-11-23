@@ -1,13 +1,16 @@
+import { Link } from 'react-router-dom';
 import {
   Box,
   Burger,
   Divider,
   Drawer,
   Group,
-  ScrollArea
+  ScrollArea,
+  Text
 } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 
+import { RoutePath } from '@/app/providers/router/config';
 import { UserInfo } from '@/shared/ui/UserInfo/UserInfo';
 
 import classes from './Header.module.css';
@@ -19,15 +22,15 @@ export const Header = () => {
     <Box pb={20}>
       <header className={classes.header}>
         <Group justify='space-between' h='100%'>
-          BravoSoft
+          <Text component={Link} to={`${RoutePath.home}`}>BravoSoft</Text>
 
           <Group h='100%' gap={0} visibleFrom='sm'>
-            <a href='#' className={classes.link}>
+            <Text component={Link} to={`${RoutePath.applicationForm}`} className={classes.link}>
               Форма для заявки
-            </a>
-            <a href='#' className={classes.link}>
+            </Text>
+            <Text component={Link} to={`${RoutePath.summaryTable}`} className={classes.link}>
               Сводная таблица
-            </a>
+            </Text>
           </Group>
 
           <Group visibleFrom='sm'>
