@@ -36,6 +36,15 @@ export const fetchUserSignIn = async <T>(body: Login): Promise<T> => {
   return data;
 };
 
+export const fetchApplications = async <T>(): Promise<T> => {
+  const response = await fetch(`${API_URL}/applications`, {
+    method: 'GET'
+  });
+
+  const data: T = await response.json();
+  return data;
+};
+
 export const fetchUserApplications = async <T>(userId: number): Promise<T> => {
   const response = await fetch(`${API_URL}/user/applications`, {
     method: 'POST',

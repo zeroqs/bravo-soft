@@ -92,7 +92,7 @@ const mockServerConfig: MockServerConfig = {
         method: 'get',
         routes: [
           {
-            data: () => applications
+            data: () => applications.sort((a, b) => b.userIds.length - a.userIds.length)
           }
         ]
       },

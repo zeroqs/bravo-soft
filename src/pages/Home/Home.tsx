@@ -21,7 +21,7 @@ const Home = () => {
 
       {isLoading && <div>Загрузка...</div>}
 
-      {data && <Table data={data} />}
+      {data && <Table title='Ваши заявки' data={data} />}
 
     </Container>
   );
