@@ -131,6 +131,27 @@ const mockServerConfig: MockServerConfig = {
             }
           }
         ]
+      },
+      {
+        path: '/user/applications',
+        method: 'post',
+        routes: [
+          {
+            data: { message: 'success' },
+            interceptors: {
+
+              response: (_, { request }) => {
+                const { userId } = request.body;
+
+                const userApplications = applications.filter(
+                  (app) => app.userIds.includes(userId)
+                ).sort((a, b) => b.userIds.length - a.userIds.length);
+
+                return userApplications;
+              }
+            }
+          }
+        ]
       }
     ]
   },

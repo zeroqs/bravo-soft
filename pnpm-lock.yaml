@@ -20,6 +20,9 @@ importers:
       '@siberiacancode/reactuse':
         specifier: ^0.0.73
         version: 0.0.73(@types/react@18.2.42)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      clsx:
+        specifier: ^2.1.1
+        version: 2.1.1
       react:
         specifier: ^18.2.0
         version: 18.2.0
