@@ -12,6 +12,9 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@mantine/core": "^7.14.1",
+    "@mantine/form": "^7.14.1",
+    "@mantine/hooks": "^7.14.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.20.1"
@@ -25,6 +28,9 @@
     "@zeroqs/prettier": "^1.0.1",
     "husky": "^8.0.0",
     "mock-config-server": "^3.6.1",
+    "postcss": "^8.4.49",
+    "postcss-preset-mantine": "^1.17.0",
+    "postcss-simple-vars": "^7.0.1",
     "typescript": "^5.2.2",
     "vite": "^5.0.0"
   }
