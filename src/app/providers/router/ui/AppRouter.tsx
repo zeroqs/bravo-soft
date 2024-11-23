@@ -1,6 +1,8 @@
 import { Suspense, useLayoutEffect } from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
 
+import { LoaderPage } from '@/shared/ui/LoaderPage/LoaderPage';
+
 import { routeConfig } from '../config';
 
 export const AppRouter = () => {
@@ -12,7 +14,7 @@ export const AppRouter = () => {
 
   return (
     <>
-      <Suspense fallback={<>loading ...</>}>
+      <Suspense fallback={<LoaderPage />}>
         <Routes>
           {Object.values(routeConfig).map(({ element, path }) => (
             <Route key={path} element={element} path={path} />
