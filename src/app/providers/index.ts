@@ -1,3 +1,4 @@
+export { AuthWrapper } from './auth/AuthWrapper';
 export { ErrorBoundary } from './errorBoundary/ui/ErrorBoundary';
 export { MantineWrapper } from './mantine/MantineWrapper';
 export { AppRouter } from './router/ui/AppRouter';

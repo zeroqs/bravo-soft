@@ -20,7 +20,6 @@ const applications = [
 const mockServerConfig: MockServerConfig = {
   rest: {
     baseUrl: '/api',
-
     configs: [
       {
         path: '/auth/sign-in',
@@ -134,6 +133,11 @@ const mockServerConfig: MockServerConfig = {
         ]
       }
     ]
+  },
+  cors: {
+    origin: 'http://localhost:5173',
+    allowedHeaders: ['Content-Type', 'X-Requested-With', 'Set-Cookie'],
+    credentials: true
   }
 };
 
