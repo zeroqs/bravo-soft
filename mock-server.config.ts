@@ -156,7 +156,10 @@ const mockServerConfig: MockServerConfig = {
     ]
   },
   cors: {
-    origin: 'http://localhost:5173',
+    origin: [
+      /^http:\/\/localhost(:\d+)?$/,
+      /^http:\/\/127\.0\.0\.1(:\d+)?$/
+    ],
     allowedHeaders: ['Content-Type', 'X-Requested-With', 'Set-Cookie'],
     credentials: true
   }
